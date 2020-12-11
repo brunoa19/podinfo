@@ -79,4 +79,4 @@ jobs:
         ./ketch pool add dev  --ingress-service-endpoint 34.82.250.78 --ingress-type istio
         ./ketch app create podinfo --pool dev
         ./ketch app deploy podinfo -i gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
-        ketch app list
+        ./ketch app list

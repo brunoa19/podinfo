@@ -6,15 +6,3 @@ kubernetes:
           protocol: TCP
           port: 9898
           target_port: 9898
-        - name: prometheus
-          protocol: TCP
-          port: 9797
-          target_port: 9797
-        - name: gRPC port
-          protocol: TCP
-          port: 9899
-          target_port: 9899
-        - name: NodePort for HTTP
-          protocol: TCP
-          port: 31198
-          target_port: 31198
