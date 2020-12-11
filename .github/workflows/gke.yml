@@ -75,6 +75,7 @@ jobs:
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
+      uses: actions/checkout@v2
       run: |-
         ls github/workspace
         ./ketch pool add podinfo --ingress-service-endpoint 34.82.250.78 --ingress-type istio
