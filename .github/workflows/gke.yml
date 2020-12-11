@@ -78,5 +78,5 @@ jobs:
       run: |-
         ./ketch pool add podinfo --ingress-service-endpoint 34.82.250.78 --ingress-type istio
         ./ketch app create podinfo --pool podinfo
-        ./ketch app deploy podinfo -i gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA --procfile https://raw.githubusercontent.com/brunoa19/podinfo/main/ketch.yaml
+        ./ketch app deploy podinfo -i gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA --ketch-yaml /github/workspace/ketch.yaml
         ./ketch app list
