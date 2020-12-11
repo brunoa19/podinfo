@@ -70,12 +70,13 @@ jobs:
     # Set up ketch
     - name: Set up Ketch
       run: |-
-        curl -s https://raw.githubusercontent.com/shipa-corp/ketch/main/install.sh | bash
+        curl -sfLo ketch https://github.com/shipa-corp/ketch/releases/download/v0.1.1/ketch-linux-amd64
+        chmod u+x ./ketch
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
       run: |-
-        ketch pool add dev  --ingress-service-endpoint 34.82.250.78 --ingress-type istio
-        ketch app create podinfo --pool dev
-        ketch app deploy podinfo -i gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
+        ./ketch pool add dev  --ingress-service-endpoint 34.82.250.78 --ingress-type istio
+        ./ketch app create podinfo --pool dev
+        ./ketch app deploy podinfo -i gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
         ketch app list
