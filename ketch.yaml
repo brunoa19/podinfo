@@ -6,3 +6,11 @@ kubernetes:
           protocol: TCP
           port: 9898
           target_port: 9898
+        - name: prometheus-metrics
+          protocol: TCP
+          port: 9797
+          target_port: 9797
+        - name: cluster-ip-grpc
+          protocol: TCP
+          port: 9999
+          target_port: 9999
