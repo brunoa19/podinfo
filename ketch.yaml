@@ -1,0 +1,8 @@
+kubernetes:
+  processes:
+    web:
+      ports:
+        - name: podinfo-web
+          protocol: TCP
+          port: 9898
+          target_port: 9898
