@@ -20,7 +20,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GKE_CLUSTER: ketch-cl1    # TODO: update to cluster name
+  GKE_CLUSTER: ketch    # TODO: update to cluster name
   GKE_ZONE: us-west1-a   # TODO: update to cluster zone
   DEPLOYMENT_NAME: ketch-test # TODO: update to deployment name
   IMAGE: static-site
